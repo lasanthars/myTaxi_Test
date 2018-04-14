@@ -9,6 +9,8 @@ import com.mytaxi.domainobject.CarDO;
 
 public class CarMapper
 {
+    //Instead of using Builder pattern to map DO to DTO, we can simply use the mapstruct ( http://mapstruct.org/ ).
+    
     public static CarDO makeCarDO(CarDTO carDTO) 
     {
         return new  CarDO(carDTO.getLicensePlate(), carDTO.getRating(), carDTO.getEngineType(), carDTO.getMeterReading());
